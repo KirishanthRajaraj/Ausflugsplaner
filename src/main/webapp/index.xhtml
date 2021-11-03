@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form id="Angaben-form">  
+            <h:outputLabel for="wochentag">Wochentag: </h:outputLabel>  
+            <h:selectOneMenu id="wochtentag" value = "#{backingBean.wochentag}">
+                <f:selectItem itemValue = "wochentag" itemLabel = "Wochentag" /> 
+                <f:selectItem itemValue = "wochenende" itemLabel = "Wochenende" /> 
+            </h:selectOneMenu> 
+            <br></br>
+            <h:outputLabel for="regenwetter">Wetter: </h:outputLabel>  
+            <h:selectOneMenu id="regenwetter" value = "#{backingBean.regenwetter}" required="true" requiredMessage="Regenwetter required">
+                <f:selectItem itemValue = "schoenesWetter" itemLabel = "Schönes Wetter" /> 
+                <f:selectItem itemValue = "regenwetter" itemLabel = "Regenwetter" /> 
+            </h:selectOneMenu> 
+            <br></br>
+            <h:outputLabel for="schule">Schule: </h:outputLabel>  
+            <h:selectOneMenu id="schule" value = "#{backingBean.schule}" required="true" requiredMessage="schule required">
+                <f:selectItem itemValue = "schulferien" itemLabel = "Schulferien" /> 
+                <f:selectItem itemValue = "schule" itemLabel = "Schule" /> 
+            </h:selectOneMenu>       
+            <br></br>
+            <h:outputLabel for="tag">Tag: </h:outputLabel>  
+            <h:selectOneMenu id="tag" value = "#{backingBean.tag}" required="true" requiredMessage="tag required">
+                <f:selectItem itemValue = "tagsueber" itemLabel = "Tagsüber" /> 
+                <f:selectItem itemValue = "abend" itemLabel = "Abend" /> 
+            </h:selectOneMenu>       
+            <br></br>
+            <h:outputLabel for="kinder">Kinder: </h:outputLabel>  
+            <h:selectOneMenu id="kinder" value = "#{backingBean.kinder}" required="true" requiredMessage="kinder required">
+                <f:selectItem itemValue = "mitKindern" itemLabel = "mit Kindern" /> 
+                <f:selectItem itemValue = "ohneKinder" itemLabel = "ohne Kinder" /> 
+            </h:selectOneMenu>  
+            <br></br>
+            <h:commandButton id="submit-button" value="Submit" action="Ausflugsplan.xthml"/>
+        </h:form>
+    </h:body>
+</html>
+
